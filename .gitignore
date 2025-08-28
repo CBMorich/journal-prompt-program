@@ -1,0 +1,2 @@
+# This stops git from caring about responses.txt, if you wanted to keep responses only on your local machine
+responses.txt
