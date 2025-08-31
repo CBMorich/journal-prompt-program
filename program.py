@@ -3,6 +3,7 @@
 # Coptyright 2025 Callum Morich
 
 import random
+import datetime
 
 with open("prompts.txt", "r", encoding="utf-8") as file:
     prompt_list = file.readlines()

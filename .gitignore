@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-# This stops git from caring about responses.txt, if you wanted to keep responses only on your local machine
-=======
->>>>>>> 4bb0141 (chore: add gitignore to repsonses.txt)
 responses.txt
