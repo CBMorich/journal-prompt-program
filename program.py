@@ -9,6 +9,13 @@ with open("prompts.txt", "r", encoding="utf-8") as file:
     prompt_list = file.readlines()
 
 # Functions
+def prompt_user():
+    print("Please select what you would like to do:")
+    print("<j> to journal from a prompt")
+    print("<x> to exit")
+    response = input(">").strip().lower()
+    return response
+
 def write_response():
     with open("responses.txt", "a", encoding="utf-8") as file:
         timestamp = datetime.now().strftime("%a %d-%m-%y, %I:%M%p")
@@ -18,9 +25,7 @@ def write_response():
 run_program = True
 
 while run_program == True:
-    print("<x> to close program")
-    print("<j> to recieve prompt")
-    user_response = input(">>>")
+    user_response = prompt_user()
     if user_response == "x":
         print("Program Closed")
         run_program = False
