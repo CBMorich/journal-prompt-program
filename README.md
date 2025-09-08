@@ -5,4 +5,5 @@ A simple program to return a random journal prompt. The user can journal and add
 
 This is to practice reading and writing from files. 
 
-test
+## Note
+This program outputs to a text file in the local directory called 'responses.txt'. You'll need to make your own copy of this file. 
