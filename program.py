@@ -8,7 +8,6 @@ from datetime import datetime
 with open("prompts.txt", "r", encoding="utf-8") as file:
     prompt_list = file.readlines()
 
-# Functions
 def prompt_user():
     print("Please select what you would like to do:")
     print("<j> to journal from a prompt")
@@ -16,12 +15,11 @@ def prompt_user():
     response = input(">").strip().lower()
     return response
 
-def write_response():
+def write_response(prompt, response):
     with open("responses.txt", "a", encoding="utf-8") as file:
         timestamp = datetime.now().strftime("%a %d-%m-%y, %I:%M%p")
-        file.write(timestamp + "\n" + prompt + "\n" + user_response + "\n==========\n")
+        file.write(timestamp + "\n" + prompt + "\n" + response + "\n==========\n")
 
-# Program Loop
 run_program = True
 
 while run_program == True:
@@ -31,8 +29,8 @@ while run_program == True:
         run_program = False
     elif user_response == "j":
         prompt = random.choice(prompt_list)
-        user_response = input(prompt)
-        write_response()
+        response = input(prompt)
+        write_response(prompt, response)
     else:
         print("I didn't understand, please try again")
 
